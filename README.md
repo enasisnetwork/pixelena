@@ -2,12 +2,11 @@
 
 These are some images created for a myriad of purposes.
 
-## Palette
-<img src="palette.png">
-<br>
-<br>
-New colors for <span style="color:#089bd8;">blue</span> and
-<span style="color:#ff00cc;">pink</span> are coming!
+## Current Palette
+<img src="current.png">
+
+## Future Palette
+<img src="future.png">
 
 ## Icons
 <img src="icons/enasisnetwork/gray.png" width=140> <img src="icons/enasisnetwork/red.png" width=140> <img src="icons/enasisnetwork/pink.png" width=140>

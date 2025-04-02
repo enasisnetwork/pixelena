@@ -1,182 +1,150 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <title>Enasis Network Palette</title>
+
+    <!-- link hrefs -->
+    <link
+     rel="icon"
+     href="https://enasisnetwork.github.io/encommon/webkit/images/enasis.svg">
+    <!-- link hrefs -->
+    <link
+     rel="stylesheet"
+     href="https://enasisnetwork.github.io/encommon/webkit/styles/default.css">
+    <!-- link hrefs -->
+
+    <!-- overrides -->
     <style>
-
-      * { font-family: monospace; }
-
-      body { background-color: #000000; }
-
-      table {
-        border-spacing: 0px 0px; }
-
+      body { padding: 10px 14px 10px 14px; }
+      table tr th {
+        font-family: monospace;
+        font-size: 8px;
+        color: #FFFFFF;
+        text-align: center;
+        white-space: normal; }
       table tr td {
         color: #FFFFFF;
-        font-size: 16px;
+        font-family: monospace;
+        font-size: 10px;
         font-weight: bold;
-        height: 100px;
-        max-height: 100px;
-        max-width: 100px;
-        min-height: 100px;
-        min-width: 100px;
+        height: 60px;
+        max-height: 60px;
+        max-width: 60px;
+        min-height: 60px;
+        min-width: 60px;
         text-align: center;
         vertical-align: middle;
-        width: 100px;
+        width: 60px;
         transition: all 300ms; }
-
-      table:not(:hover) tr td.inactive {
-        opacity: 0.25; }
-
       table tr:nth-child(1) td,
        table tr:nth-child(2) td {
         color: #000000; }
-
     </style>
+    <!-- overrides -->
+
+    <!-- scripts -->
+    <script src="https://enasisnetwork.github.io/encommon/webkit/scripts/default.js"></script>
+    <script src="https://enasisnetwork.github.io/encommon/webkit/scripts/helpers.js"></script>
+    <!-- scripts -->
+
   </head>
   <body>
-    <table>
-      <tr>
-        <td style="background-color:#E9E9E9;"></td>
-        <td style="background-color:#FF6666;"></td>
-        <td style="background-color:#ff00cc;"></td>
-        <td style="background-color:#66FFFF;"></td>
-        <td style="background-color:#089bd8;"></td>
-        <td style="background-color:#FFFF66;"></td>
-        <td style="background-color:#66FF66;"></td>
-        <td class="inactive" style="background-color:#FF66FF;"></td>
-        <td class="inactive" style="background-color:#B366FF;"></td>
-        <td class="inactive" style="background-color:#6666FF;"></td>
-        <td class="inactive" style="background-color:#66B3FF;"></td>
-        <td class="inactive" style="background-color:#FFB366;"></td>
-        <td class="inactive" style="background-color:#B3FF66;"></td>
-        <td class="inactive" style="background-color:#66FFB3;"></td>
-      </tr>
-      <tr>
-        <td style="background-color:#B7B7B7;"></td>
-        <td style="background-color:#CC3333;"></td>
-        <td style="background-color:#cc00a3;"></td>
-        <td style="background-color:#33CCCC;"></td>
-        <td style="background-color:#0875a4;"></td>
-        <td style="background-color:#CCCC33;"></td>
-        <td style="background-color:#33CC33;"></td>
-        <td class="inactive" style="background-color:#CC33CC;"></td>
-        <td class="inactive" style="background-color:#9d5ae0;"></td>
-        <td class="inactive" style="background-color:#3333CC;"></td>
-        <td class="inactive" style="background-color:#5a9de0;"></td>
-        <td class="inactive" style="background-color:#E09D5A;"></td>
-        <td class="inactive" style="background-color:#9DE05A;"></td>
-        <td class="inactive" style="background-color:#5ae09d;"></td>
-      </tr>
-      <tr>
-        <td style="background-color:#888888;"></td>
-        <td style="background-color:#990000;"></td>
-        <td style="background-color:#8f0072;"></td>
-        <td style="background-color:#009999;"></td>
-        <td style="background-color:#065c81;"></td>
-        <td style="background-color:#999900;"></td>
-        <td style="background-color:#009900;"></td>
-        <td class="inactive" style="background-color:#990099;"></td>
-        <td class="inactive" style="background-color:#874DC0;"></td>
-        <td class="inactive" style="background-color:#000099;"></td>
-        <td class="inactive" style="background-color:#4d87c0;"></td>
-        <td class="inactive" style="background-color:#C0874D;"></td>
-        <td class="inactive" style="background-color:#87C04D;"></td>
-        <td class="inactive" style="background-color:#4dc087;"></td>
-      </tr>
-      <tr>
-        <td style="background-color:#5B5B5B;"></td>
-        <td style="background-color:#660000;"></td>
-        <td style="background-color:#660052;"></td>
-        <td style="background-color:#006666;"></td>
-        <td style="background-color:#04415b;"></td>
-        <td style="background-color:#666600;"></td>
-        <td style="background-color:#006600;"></td>
-        <td class="inactive" style="background-color:#660066;"></td>
-        <td class="inactive" style="background-color:#5a3380;"></td>
-        <td class="inactive" style="background-color:#000066;"></td>
-        <td class="inactive" style="background-color:#335a80;"></td>
-        <td class="inactive" style="background-color:#805A33;"></td>
-        <td class="inactive" style="background-color:#5A8033;"></td>
-        <td class="inactive" style="background-color:#33805a;"></td>
-      </tr>
-      <tr>
-        <td style="background-color:#2C2C2C;"></td>
-        <td style="background-color:#330000;"></td>
-        <td style="background-color:#3d0031;"></td>
-        <td style="background-color:#003333;"></td>
-        <td style="background-color:#032f42;"></td>
-        <td style="background-color:#333300;"></td>
-        <td style="background-color:#003300;"></td>
-        <td class="inactive" style="background-color:#330033;"></td>
-        <td class="inactive" style="background-color:#2d1a40;"></td>
-        <td class="inactive" style="background-color:#000033;"></td>
-        <td class="inactive" style="background-color:#1a2d40;"></td>
-        <td class="inactive" style="background-color:#402D1A;"></td>
-        <td class="inactive" style="background-color:#2D401A;"></td>
-        <td class="inactive" style="background-color:#1a402d;"></td>
-      </tr>
-      <tr>
-        <td style="background-color:#181818;"></td>
-        <td style="background-color:#1A0A0A;"></td>
-        <td style="background-color:#200019;"></td>
-        <td style="background-color:#0A1A1A;"></td>
-        <td style="background-color:#021822;"></td>
-        <td style="background-color:#1A1A0A;"></td>
-        <td style="background-color:#0A1A0A;"></td>
-        <td class="inactive" style="background-color:#1A0A1A;"></td>
-        <td class="inactive" style="background-color:#170d20;"></td>
-        <td class="inactive" style="background-color:#0A0A1A;"></td>
-        <td class="inactive" style="background-color:#0d1720;"></td>
-        <td class="inactive" style="background-color:#20170d;"></td>
-        <td class="inactive" style="background-color:#17200D;"></td>
-        <td class="inactive" style="background-color:#0d2017;"></td>
-      </tr>
-    </table>
+
+    <!-- content -->
+    <h1>Current Palette</h1>
+    <div id="palette_old"></div>
+    <br>
+    <h1>Future Palette</h1>
+    <div id="palette_new"></div>
+    <script>
+
+
+      let PALETTE_OLD = {
+        'GRAY': ['E9E9E9', 'B7B7B7', '888888', '5B5B5B', '2C2C2C', '181818'],
+        'RED': ['FF6666', 'CC3333', '990000', '660000', '330000', '1A0A0A'],
+        'YELLOW': ['FFFF66', 'CCCC33', '999900', '666600', '333300', '1A1A0A'],
+        'GREEN': ['66FF66', '33CC33', '009900', '006600', '003300', '0A1A0A'],
+        'TEAL': ['66FFFF', '33CCCC', '009999', '006666', '003333', '0A1A1A'],
+        'BLUE': ['089BD8', '0875A4', '065C81', '04415B', '032F42', '021822'],
+        'PINK': ['FF00CC', 'CC00A3', '8F0072', '660052', '3D0031', '200019']};
+
+      let PALETTE_NEW = {
+        'GRAY': ['E9E9E9', '8B8B8B', '6B6B6B', '4D4D4D', '272727', '151515'],
+        'RED': ['FF6666', 'CD0909', '960E0E', '680F0F', '320A0A', '1A0707'],
+        'ORANGE': ['FF9900', '935B06', '6B440A', '4A310B', '231807', '120D05'],
+        'YELLOW': ['FFFF66', 'CDCD09', '96960E', '68680F', '32320A', '1A1A07'],
+        'LIME': ['00FF00', '069306', '0A6B0A', '0B4A0B', '072307', '051205'],
+        'GREEN': ['66FF66', '09CD09', '0E960E', '0F680F', '0A320A', '071A07'],
+        'CYAN': ['66FFFF', '09CDCD', '0E9696', '0F6868', '0A3232', '071A1A'],
+        'TURQOS': ['66FFDD', '09CD9F', '0E9676', '0F6853', '0A3228', '071A15'],
+        'BLUE': ['66DDFF', '09A3CD', '0E7996', '0F5568', '0A2932', '07161A'],
+        'BOOLI': ['089BD8', '0A5A79', '0C4359', '0B2F3E', '07171D', '050C0F'],
+        'PURPLE': ['CC00FF', '770693', '580A6B', '3E0B4A', '1E0723', '100512'],
+        'PINK': ['FF00CC', '930677', '6B0A58', '4A0B3E', '23071E', '120510']};
+
+
+
+      function palette(
+        palette,
+      ) {
+
+        let table = $('<table/>');
+        let thead = $('<thead/>');
+        let tbody = $('<tbody/>');
+        table.append(thead);
+        table.append(tbody);
+
+        let trow = $('<tr/>');
+        thead.append(trow);
+
+
+        for (
+          const [name, colors]
+          of Object.entries(palette)
+        ) {
+
+          let tcell = $('<th/>');
+          trow.append(tcell);
+          tcell.text(name); }
+
+
+        for (
+          let count = 0;
+          count < 6; count++
+        ) {
+
+          let trow = $('<tr/>');
+          tbody.append(trow);
+
+          for (
+            const [name, colors]
+            of Object.entries(palette)
+          ) {
+
+            let tcell = $('<td/>');
+            trow.append(tcell);
+
+            let color =
+              `#${colors[count]}`;
+
+            tcell.css(
+              'background-color',
+              color);
+
+            tcell.text(color); } }
+
+        return table; }
+
+
+
+      $('#palette_old').html(
+        palette(PALETTE_OLD));
+
+      $('#palette_new').html(
+        palette(PALETTE_NEW));
+
+
+    </script>
+
   </body>
-  <script>
-
-
-
-    function tohex(color) {
-
-      if (!color.startsWith('rgb')) return;
-
-      color = color
-        .replace('rgb(','')
-        .replace(')','')
-        .split(',');
-
-
-      function _tohex(color) {
-
-        let value =
-          parseInt(color, 10)
-          .toString(16)
-          .toUpperCase();
-
-        return value; }
-
-      let r = _tohex(color[0]);
-      let g = _tohex(color[1]);
-      let b = _tohex(color[2]);
-
-      r = r.length == 1 ? '0' + r : r;
-      g = g.length == 1 ? '0' + g : g;
-      b = b.length == 1 ? '0' + b : b;
-
-      return `#${r}${g}${b}`; }
-
-
-
-    const cells =
-      document
-      .querySelectorAll('td');
-
-    cells.forEach((cell) => {
-      let style = cell.style;
-      let color = style.backgroundColor;
-      if (color === 'transparent') return;
-      cell.innerHTML = tohex(color); });
-
-
-  </script>
 </html>
