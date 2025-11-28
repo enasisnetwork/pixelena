@@ -36,8 +36,7 @@
         vertical-align: middle;
         width: 60px;
         transition: all 300ms; }
-      table tr:nth-child(1) td,
-       table tr:nth-child(2) td {
+      table tr:nth-child(1) td {
         color: #000000; }
     </style>
     <!-- overrides -->
@@ -52,14 +51,16 @@
 
     <!-- content -->
     <h1>Current Palette</h1>
-    <div id="palette_old"></div>
+    <div id="palette_legacy"></div>
     <br>
     <h1>Future Palette</h1>
-    <div id="palette_new"></div>
+    <div id="palette_future1"></div>
+    <br>
+    <div id="palette_future2"></div>
     <script>
 
 
-      let PALETTE_OLD = {
+      let PALETTE_LEGACY = {
         'GRAY': ['E9E9E9', 'B7B7B7', '888888', '5B5B5B', '2C2C2C', '181818'],
         'RED': ['FF6666', 'CC3333', '990000', '660000', '330000', '1A0A0A'],
         'YELLOW': ['FFFF66', 'CCCC33', '999900', '666600', '333300', '1A1A0A'],
@@ -68,19 +69,35 @@
         'BLUE': ['089BD8', '0875A4', '065C81', '04415B', '032F42', '021822'],
         'PINK': ['FF00CC', 'CC00A3', '8F0072', '660052', '3D0031', '200019']};
 
-      let PALETTE_NEW = {
-        'GRAY': ['E9E9E9', '8B8B8B', '6B6B6B', '4D4D4D', '272727', '151515'],
-        'RED': ['FF6666', 'CD0909', '960E0E', '680F0F', '320A0A', '1A0707'],
-        'ORANGE': ['FF9900', '935B06', '6B440A', '4A310B', '231807', '120D05'],
-        'YELLOW': ['FFFF66', 'CDCD09', '96960E', '68680F', '32320A', '1A1A07'],
-        'LIME': ['00FF00', '069306', '0A6B0A', '0B4A0B', '072307', '051205'],
-        'GREEN': ['66FF66', '09CD09', '0E960E', '0F680F', '0A320A', '071A07'],
-        'CYAN': ['66FFFF', '09CDCD', '0E9696', '0F6868', '0A3232', '071A1A'],
-        'TURQOS': ['66FFDD', '09CD9F', '0E9676', '0F6853', '0A3228', '071A15'],
-        'BLUE': ['66DDFF', '09A3CD', '0E7996', '0F5568', '0A2932', '07161A'],
-        'BOOLI': ['089BD8', '0A5A79', '0C4359', '0B2F3E', '07171D', '050C0F'],
-        'PURPLE': ['CC00FF', '770693', '580A6B', '3E0B4A', '1E0723', '100512'],
-        'PINK': ['FF00CC', '930677', '6B0A58', '4A0B3E', '23071E', '120510']};
+      let PALETTE_FUTURE1 = {
+        'RED 1L': ['FF6666', 'CD0909', '960E0E', '680F0F', '320A0A', '1A0707'],
+        'GREN 1L': ['66FF66', '09CD09', '0E960E', '0F680F', '0A320A', '071A07'],
+        'BLUE 1L': ['6666FF', '0909CD', '0E0E96', '0F0F68', '0A0A32', '07071A'],
+        'YLLW 1L': ['FFFF66', 'CDCD09', '96960E', '68680F', '32320A', '1A1A07'],
+        'CYAN 1L': ['66FFFF', '09CDCD', '0E9696', '0F6868', '0A3232', '071A1A'],
+        'PINK 1L': ['FF66FF', 'CD09CD', '960E96', '680F68', '320A32', '1A071A'],
+        'GRAY 1L': ['E9E9E9', '8B8B8B', '6B6B6B', '4D4D4D', '272727', '151515'],
+        'ORNG 1L': ['FF9900', '935B06', '6B440A', '4A310B', '231807', '120D05'],
+        'BLUE 2L': ['66CCFF', '098FCD', '0E6B96', '0F4C68', '0A2532', '07141A'],
+        'MGTA 1L': ['FF00CC', '930677', '6B0A58', '4A0B3E', '23071E', '120510'],
+        'PURP 1L': ['CC00FF', '770693', '580A6B', '3E0B4A', '1E0723', '100512'],
+        'TURQ 1L': ['66FFCC', '09CD8C', '0E9669', '0F684A', '0A3224', '071A13'],
+        'GOLD': ['FFCC00', '937706', '6B580A', '4A3E0B', '231E07', '121005']};
+
+      let PALETTE_FUTURE2 = {
+        'RED 1D': ['AA0000', '610404', '470606', '310707', '170505', '0C0303'],
+        'GREN 1D': ['00AA00', '046104', '064706', '073107', '051705', '030C03'],
+        'BLUE 1D': ['0000AA', '040461', '060647', '070731', '050517', '03030C'],
+        'YLLW 1D': ['AAAA00', '616104', '474706', '313107', '171705', '0C0C03'],
+        'CYAN 1D': ['00AAAA', '046161', '064747', '073131', '051717', '030C0C'],
+        'PINK 1D': ['AA00AA', '610461', '470647', '310731', '170517', '0C030C'],
+        'GRAY 1D': ['969696', '595959', '444444', '313131', '191919', '0D0D0D'],
+        'ORNG 1D': ['AA6600', '613C04', '472D06', '312007', '171005', '0C0903'],
+        'BLUE 2D': ['0066AA', '043C61', '062D47', '072031', '051017', '03090C'],
+        'MGTA 1D': ['AA0066', '61043C', '47062D', '310720', '170510', '0C0309'],
+        'PURP 1D': ['6600AA', '3C0461', '2D0647', '200731', '100517', '09030C'],
+        'TURQ 1D': ['00AA66', '04613C', '06472D', '073120', '051710', '030C09'],
+        'BOOLI': ['089BD8', '0A5A79', '0C4359', '0B2F3E', '07171D', '050C0F']};
 
 
 
@@ -137,11 +154,14 @@
 
 
 
-      $('#palette_old').html(
-        palette(PALETTE_OLD));
+      $('#palette_legacy').html(
+        palette(PALETTE_LEGACY));
 
-      $('#palette_new').html(
-        palette(PALETTE_NEW));
+      $('#palette_future1').html(
+        palette(PALETTE_FUTURE1));
+
+      $('#palette_future2').html(
+        palette(PALETTE_FUTURE2));
 
 
     </script>
